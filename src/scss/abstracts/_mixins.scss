@@ -1,0 +1,12 @@
+@mixin action1($sec) {
+    transition: all $sec;
+}
+
+@mixin action2($colorGr) {
+    @for $colorGradient from 1 through 28 {
+      .cards__item:nth-child(#{$colorGradient}) {
+        border: 5px solid lighten($colorGr, $colorGradient * 3);
+      }
+    }
+  }
+  
